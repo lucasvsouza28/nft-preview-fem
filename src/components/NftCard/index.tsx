@@ -145,7 +145,7 @@ const DaysLeft = styled('span', {
 const Divider = styled('hr', {
   height: '1px',
   border: 'none',
-  background: '#FFF',
+  background: '$text_secondary',
   opacity: '0.2'
 });
 

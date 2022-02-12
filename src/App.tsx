@@ -13,7 +13,7 @@ import { useState } from 'react'
 import { NftCard } from './components/NftCard'
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState(lightTheme);
+  const [currentTheme, setCurrentTheme] = useState(theme);
 
   const toggleTheme = () => setCurrentTheme(currentTheme === lightTheme ? theme : lightTheme)
 
