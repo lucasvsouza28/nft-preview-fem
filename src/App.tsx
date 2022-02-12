@@ -36,30 +36,32 @@ function App() {
     <Container
       className={currentTheme}
     >
-      <Box
-        css={{
-          textAlign: 'right',
-        }}
-      >
-        <ToggleThemeButton
-          onClick={toggleTheme}
+      <Box>
+        <Box
+          css={{
+            textAlign: 'right',
+          }}
         >
-          {
-            currentTheme === lightTheme ? (
-              <BsMoonFill color={currentTheme.colors.text_primary} />
-            ) : (
-              <BsSunFill color={currentTheme.colors.text_primary} />
-            )
-          }
-        </ToggleThemeButton>
+          <ToggleThemeButton
+            onClick={toggleTheme}
+          >
+            {
+              currentTheme === lightTheme ? (
+                <BsMoonFill color={currentTheme.colors.text_primary} />
+              ) : (
+                <BsSunFill color={currentTheme.colors.text_primary} />
+              )
+            }
+          </ToggleThemeButton>
+        </Box>
 
+        <NftCard nft={nft} />
       </Box>
-
-      <NftCard nft={nft} />
     </Container>
   )
 }
 
+const Box = styled('div', {});
 const ToggleThemeButton = styled('button', {
   background: 'transparent',
   border: 'none',
@@ -69,8 +71,14 @@ const ToggleThemeButton = styled('button', {
     transform: 'scale(0.95)'
   }
 });
-const Box = styled('div', {});
 const Container = styled('div', {
+  display: 'grid',
+  placeItems: 'center',
+  height: '100vh',
+  width: '100wh',
+
+  background: '$bg_body',
+  color: '$text_primary',
 });
 
 export default App

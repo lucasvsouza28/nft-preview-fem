@@ -21,11 +21,11 @@ export const {
 
 export const lightTheme = createTheme({
   colors: {
-    bg_body: '#e1e1e1',
+    bg_body: '#eee',
     bg_element: '#FFF',
     text_active: 'darkcyan',
     text_primary: '#000',
-    text_secondary: '#CCC',
+    text_secondary: '#858585',
   }
 });
 
@@ -36,14 +36,6 @@ export const global = globalCss({
     boxSizing: 'border-box',
   },
   body: {
-    display: 'grid',
-    placeItems: 'center',
-
-    height: '100vh',
-
-    background: '$bg_body',
-    color: '$text_primary',
-
     fontFamily: 'sans-serif',
   }
 });
