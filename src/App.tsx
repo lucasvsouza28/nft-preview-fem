@@ -47,15 +47,17 @@ function App() {
           >
             {
               currentTheme === lightTheme ? (
-                <BsMoonFill color={currentTheme.colors.text_primary} />
+                <BsMoonFill color={currentTheme.colors.text_primary.value} />
               ) : (
-                <BsSunFill color={currentTheme.colors.text_primary} />
+                <BsSunFill color={currentTheme.colors.text_primary.value} />
               )
             }
           </ToggleThemeButton>
         </Box>
 
-        <NftCard nft={nft} />
+        <NftCard
+          nft={nft}
+        />
       </Box>
     </Container>
   )
@@ -79,6 +81,8 @@ const Container = styled('div', {
 
   background: '$bg_body',
   color: '$text_primary',
+
+  transition: 'all .2s ease'
 });
 
 export default App

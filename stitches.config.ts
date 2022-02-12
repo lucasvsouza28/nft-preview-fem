@@ -15,6 +15,9 @@ export const {
       text_active: 'cyan',
       text_primary: '#FFF',
       text_secondary: '#687d9c',
+    },
+    shadows: {
+      1: '#687d9c'
     }
   }
 });
@@ -26,6 +29,9 @@ export const lightTheme = createTheme({
     text_active: 'darkcyan',
     text_primary: '#000',
     text_secondary: '#858585',
+  },
+  shadows: {
+    1: '#e1e1e1'
   }
 });
 

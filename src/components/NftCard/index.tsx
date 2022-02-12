@@ -1,8 +1,5 @@
 import {
   styled,
-  global,
-  theme,
-  lightTheme,
 } from '../../../stitches.config'
 
 import ethereumSvg from '../../assets/icon-ethereum.svg'
@@ -64,14 +61,10 @@ export const NftCard = ({
           src={nft.creator.avatar}
         />
         <Box>
-          <Span
-            css={{
-              color: '$text_secondary',
-            }}
-          >
+          <Span secondary>
             Creation of
           </Span>
-          <Span>
+          <Span primary>
             {' ' + nft.creator.name}
           </Span>
         </Box>
@@ -81,7 +74,22 @@ export const NftCard = ({
 }
 
 const Box = styled('div', {});
-const Span = styled('span', {});
+
+const Span = styled('span', {
+  variants: {
+    primary: {
+      true: {
+        color: '$text_primary'
+      }
+    },
+    secondary: {
+      true: {
+        color: '$text_secondary'
+      }
+    }
+  }
+});
+
 const Container = styled('div', {
   display: 'flex',
   flexDirection: 'column',
@@ -92,6 +100,15 @@ const Container = styled('div', {
   borderRadius: '8px',
   background: '$bg_element',
   padding: '1.5rem',
+
+  transform: 'scale(.99)',
+
+  '&:hover': {
+    boxShadow: `0 0 6px 0 $1`,
+    transform: 'scale(1)'
+  },
+
+  transition: 'all .2s ease'
 });
 
 const NftImage = styled('img', {
